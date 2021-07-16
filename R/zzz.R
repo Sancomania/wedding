@@ -1,4 +1,4 @@
-globalVariables(c("description", "destinataire", "label", "montant", "paye_en_attente", "payeur", "poste",
+globalVariables(c("desc", "destinataire", "label", "montant", "paye_en_attente", "payeur", "poste",
                   "prop", "reel_previsionnel", "somme",
                   "amount", "latitude", "longitude", "object", "paid_pending", "paymaster",
                   "prop_amount",

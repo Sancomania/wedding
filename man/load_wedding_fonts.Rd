@@ -21,11 +21,9 @@ extrafont::fonts() # available fonts
 ggplot(data = iris) +
   aes(x = Sepal.Width, fill = Species) +
   geom_density(alpha = 0.6, color = NA) +
-  labs(title = "Largeur des sépales des iris",
-       subtitle = "3 variétés") +
+  labs(title = "Largeur des sépales des iris") +
   theme(
-    plot.title = element_text(family = "Bauer Bodoni Std"),
-    plot.subtitle = element_text(family = "Old Script"),
+    title = element_text(family = "Old Script"),
     text = element_text(family = "Bauer Bodoni Std")
     )
 }

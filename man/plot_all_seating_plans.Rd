@@ -6,8 +6,8 @@
 \usage{
 plot_all_seating_plans(
   .data,
-  font_family_table = "Times",
-  font_family_guests = "Times"
+  font_family_table = "Old Script",
+  font_family_guests = "Bauer Bodoni Std"
 )
 }
 \arguments{

@@ -31,30 +31,30 @@ plot_one_seating_plan <- function(.data, id_table, font_family_table = "Old Scri
   
   if (number_of_guests > 0) {
     ggplot() +
-      ggpattern::geom_rect_pattern(
-        aes(
-          xmin = -1,
-          ymin = -1,
-          xmax = number_of_guests - 1,
-          ymax = 1
-        ),
-        pattern = 'image',
-        pattern_type = 'squish',
-        pattern_filename = wood_image,
-        color = "#786149",
-        size = 2
-      ) +
-      # geom_rect(
+      # ggpattern::geom_rect_pattern(
       #   aes(
       #     xmin = -1,
       #     ymin = -1,
       #     xmax = number_of_guests - 1,
       #     ymax = 1
       #   ),
-      #   fill = "#786149",
+      #   pattern = 'image',
+      #   pattern_type = 'squish',
+      #   pattern_filename = wood_image,
       #   color = "#786149",
       #   size = 2
       # ) +
+      geom_rect(
+        aes(
+          xmin = -1,
+          ymin = -1,
+          xmax = number_of_guests - 1,
+          ymax = 1
+        ),
+        fill = "#786149",
+        color = "#786149",
+        size = 2
+      ) +
       geom_text(
         data = data_guests_one_table,
         aes(
@@ -84,30 +84,30 @@ plot_one_seating_plan <- function(.data, id_table, font_family_table = "Old Scri
       )
   } else {
     ggplot() +
-    ggpattern::geom_rect_pattern(
-      aes(
-        xmin = -1,
-        ymin = -1,
-        xmax = 1,
-        ymax = 1
-      ),
-      pattern = 'image',
-      pattern_type = 'squish',
-      pattern_filename = wood_image,
-      color = "#786149",
-      size = 2
-    ) +
-    # geom_rect(
+    # ggpattern::geom_rect_pattern(
     #   aes(
     #     xmin = -1,
     #     ymin = -1,
     #     xmax = 1,
     #     ymax = 1
     #   ),
-    #   fill = "#786149",
+    #   pattern = 'image',
+    #   pattern_type = 'squish',
+    #   pattern_filename = wood_image,
     #   color = "#786149",
     #   size = 2
     # ) +
+    geom_rect(
+      aes(
+        xmin = -1,
+        ymin = -1,
+        xmax = 1,
+        ymax = 1
+      ),
+      fill = "#786149",
+      color = "#786149",
+      size = 2
+    ) +
       coord_polar(start = 0) +
       labs(title = paste("Table", id_table)) +
       theme(

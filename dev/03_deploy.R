@@ -16,10 +16,12 @@
 ## Run checks ----
 ## Check the package before sending to prod
 attachment::att_amend_desc()
+#usethis::use_package("sf")
+#usethis::use_dev_package("ggpattern")
+usethis::use_latest_dependencies()
 devtools::check()
 
 # Deploy
-
 account_name <- Sys.getenv("NAME_ACCOUNT_RSTUDIO_CONNECT")
 account_server <- Sys.getenv("NAME_SERVER_RSTUDIO_CONNECT")
 api_connect_key <- Sys.getenv("API_CONNECT_KEY")
@@ -36,3 +38,5 @@ rsconnect::deployApp(
   account = account_name,                    # your Connect username
   server = account_server                    # the Connect server, see rsconnect::accounts()
 )
+
+rsconnect::writeManifest()

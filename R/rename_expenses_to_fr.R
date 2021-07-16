@@ -25,9 +25,13 @@ rename_expenses_to_fr <- function(.data) {
       TRUE ~ NA_character_
     )) %>% 
     rename(
-      stats::setNames(c("object", "real_projected", "paid_pending", "description", "society", "paymaster", "amount"), 
-                      c("Poste de d\u00e9pense", "R\u00e9el ou pr\u00e9visionnel", "Pay\u00e9 ou en attente", "Description", "Destinataire", "Payeur", "Montant") 
-                      )
+      "Poste de d\u00e9pense" = "object",
+      "R\u00e9el ou pr\u00e9visionnel" = "real_projected",
+      "Pay\u00e9 ou en attente" = "paid_pending",
+      "Desc" = "desc",
+      "Destinataire" = "society",
+      "Payeur" = "paymaster",
+      "Montant" = "amount"
     )
     
 } 
