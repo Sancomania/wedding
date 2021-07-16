@@ -18,8 +18,10 @@
 attachment::att_amend_desc()
 #usethis::use_package("sf")
 #usethis::use_dev_package("ggpattern")
-usethis::use_latest_dependencies()
+#usethis::use_latest_dependencies()
 devtools::check()
+
+rsconnect::writeManifest()
 
 # Deploy
 account_name <- Sys.getenv("NAME_ACCOUNT_RSTUDIO_CONNECT")
@@ -38,5 +40,3 @@ rsconnect::deployApp(
   account = account_name,                    # your Connect username
   server = account_server                    # the Connect server, see rsconnect::accounts()
 )
-
-rsconnect::writeManifest()
