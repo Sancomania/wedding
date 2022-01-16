@@ -25,14 +25,23 @@ mod_tab_covid_ui <- function(id){
              # Texte
              tags$div(class = "landing-block foreground-content",
                       tags$div(class = "foreground-text",
-                               tags$p("Les restrictions sanitaires", style = "font-family: \'Bauer Bodoni Std 1\'; font-size: 30px; letter-spacing:3px; text-align: center"),
-                               tags$p("A l\'heure actuelle, les f\u00eates de mariage sont interdites.", style = "font-family: \'MrsEavesItalic\'; letter-spacing:3px; text-align: center"),
-                               tags$p("Nous avons bon espoir d\'avoir l\'autorisation de le faire en octobre.", style = "font-family: \'MrsEavesItalic\'; letter-spacing:3px; text-align: center"),
-                               tags$p("Nous viendrons indiquer ici les mesures sanitaires si certaines sont obligatoires au moment de l\'\u00e9v\u00e9nement (port du masque, etc.).", style = "font-family: \'MrsEavesItalic\'; letter-spacing:3px; text-align: center")
+                               tags$p("Retricciones Sanitarias", style = "font-family: \'Bauer Bodoni Std 1\'; font-size: 30px; letter-spacing:3px; text-align: center"),
+                               tags$p("Por el bien tuyo y de nuestros invitados, les solicitamos realizarse una prueba covid antes del evento para disfrutar seguros de nuestro gran día.", style = "font-family: \'MrsEavesItalic\'; letter-spacing:3px; text-align: center"),
+                               tags$p("Si tu o alguien cercano a ti presenta algún síntoma o ha estado en contacto con alguien que los tenga, acude a tu médico.", style = "font-family: \'MrsEavesItalic\'; letter-spacing:3px; text-align: center"),
+                               tags$p("Cuidémonos todos.", style = "font-family: \'MrsEavesItalic\'; letter-spacing:3px; text-align: center")
+                      ),
+                      
+                      tags$div(class = "foreground-text",
+                               tags$p("Código de Etiqueta", style = "font-family: \'Bauer Bodoni Std 1\'; font-size: 30px; letter-spacing:3px; text-align: center"),
+                               tags$p("Por el bien tuyo y de nuestros invitados, les solicitamos realizarse una prueba covid antes del evento para disfrutar seguros de nuestro gran día.", style = "font-family: \'MrsEavesItalic\'; letter-spacing:3px; text-align: center"),
+                               tags$p("Si tu o alguien cercano a ti presenta algún síntoma o ha estado en contacto con alguien que los tenga, acude a tu médico.", style = "font-family: \'MrsEavesItalic\'; letter-spacing:3px; text-align: center"),
+                               tags$p("Cuidémonos todos.", style = "font-family: \'MrsEavesItalic\'; letter-spacing:3px; text-align: center")
                       )
              )
     )
     
+    
+
   )
   
 }

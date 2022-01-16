@@ -34,7 +34,8 @@ get_count_countdown_moments <- function(start_moment, end_moment, text,
   nb_seconds <- interval_moments %% days(1) %% hours(1) %% minutes(1) %/% seconds(1)
   
   if (language == "en") {
-    glue("{nb_days} d. {nb_hours} h. {nb_minutes} m. {nb_seconds} s. {text}")
+    # glue("{nb_days} d. {nb_hours} h. {nb_minutes} m. {nb_seconds} s. {text}")
+    glue("{nb_days} días {nb_hours} horas y {nb_minutes} minutos {text}")
   } else if (language == "fr") {
     glue("{nb_days} j. {nb_hours} h. {nb_minutes} m. {nb_seconds} s. {text}")
   }

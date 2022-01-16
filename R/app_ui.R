@@ -29,7 +29,7 @@ app_ui <- function(request) {
                ),
                
                tabPanel(
-                 title = "Lugar",
+                 title = "Lugar y Hospedaje",
                  mod_tab_place_ui("tab_place_ui_1")
                ),
                
@@ -43,8 +43,9 @@ app_ui <- function(request) {
                #   mod_tab_witnesses_ui("tab_witnesses_ui_1")
                # ),
                # 
+               
                tabPanel(
-                 title = "Covid",
+                 title = "Información",
                  mod_tab_covid_ui("tab_covid_ui_1")
                ),
                

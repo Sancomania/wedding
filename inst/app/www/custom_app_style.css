@@ -84,7 +84,7 @@ html,body{
 
 .landing-wrapper .foreground-content{
     position: absolute;
-    top: 10%;
+    top: 20%;
     z-index: 9999;
     display: flex;
     justify-content: center;

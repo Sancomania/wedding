@@ -30,33 +30,41 @@ mod_tab_couple_ui <- function(id){
                                tags$h1("Fernanda & Santiago", style = "font-family: 'Bauer Bodoni Std 1'; letter-spacing:10px"),
                                # tags$p("se disent oui", style = "font-family: 'Old script'; font-size:50px; letter-spacing:5px"),
                                tags$br(),
-                               tags$p("26 abril 2022", style = "font-family: 'Bauer Bodoni Std 1'; letter-spacing:10px")
+                               tags$p("26 abril 2022", style = "font-family: 'Bauer Bodoni Std 1'; letter-spacing:10px"),
+                               tags$br(),
+                               tags$p(textOutput(
+                                 outputId = ns("decompte_mariage")
+                                 ),
+                                 style = "font-family: 'Bauer Bodoni Std 1'; 
+                                 font-size:20px; 
+                                 letter-spacing:5px; 
+                                 text-align: center" 
+                               ))
                       )
-             ),
+             )
              
-             # Décomptes
-             span(
-               textOutput(
-                 outputId = ns("decompte_vie_commune")
-                 ),
-               style = "font-family: 'Bauer Bodoni Std 1'; 
-                        font-size:20px; 
-                        letter-spacing:5px; 
-                        color: white;
-                        text-align: center" 
-               ),
+             # span(
+             #   textOutput(
+             #     outputId = ns("decompte_vie_commune")
+             #     ),
+             #   style = "font-family: 'Bauer Bodoni Std 1'; 
+             #            font-size:20px; 
+             #            letter-spacing:5px; 
+             #            color: white;
+             #            text-align: center" 
+             #   ),
              
-             span(
-               textOutput(
-                 outputId = ns("decompte_mariage")
-               ),
-               style = "font-family: 'Bauer Bodoni Std 1'; 
-                        font-size:20px; 
-                        letter-spacing:5px; 
-                        color: white;
-                        text-align: center" 
-             ),     
-    )
+             # span(
+             #   textOutput(
+             #     outputId = ns("decompte_mariage")
+             #   ),
+             #   style = "font-family: 'Bauer Bodoni Std 1'; 
+             #            font-size:20px; 
+             #            letter-spacing:5px; 
+             #            color: white;
+             #            text-align: center" 
+             # ),     
+    # )
   )
   
 }
@@ -70,20 +78,20 @@ mod_tab_couple_server <- function(id, r_global){
     
     ns <- session$ns
     
-    output$decompte_vie_commune <- renderText({
-      
-      get_count_countdown_moments(start_moment = "2009-10-14 04:00:00",
-                                  end_moment = now(),
-                                  text = "desde que nos conocimos",
-                                  # time_zone = "Europe/Paris",
-                                  language = "en")
-      
-    })
+    # output$decompte_vie_commune <- renderText({
+    #   
+    #   get_count_countdown_moments(start_moment = "2009-10-14 04:00:00",
+    #                               end_moment = now(),
+    #                               text = "desde que nos conocimos",
+    #                               # time_zone = "Europe/Paris",
+    #                               language = "en")
+    #   
+    # })
     
     output$decompte_mariage <- renderText({
 
       get_count_countdown_moments(start_moment = now(),
-                                  end_moment = "2022-03-26 15:00:00",
+                                  end_moment = "2022-03-26 15:30:00",
                                   text = "para casarnos",
                                   # time_zone = "Europe/Paris",
                                   language = "en")
