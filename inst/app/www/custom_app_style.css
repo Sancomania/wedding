@@ -59,7 +59,7 @@ html,body{
 }
 
 .tabbable > .nav > li    > a {
-    background-color: white; 
+    background-color: blue; 
     color: black;
 }
 

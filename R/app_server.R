@@ -9,7 +9,7 @@
 app_server <- function( input, output, session ) {
   
   credentials <- data.frame(
-    user = Sys.getenv("LOGIN_USER"), # mandatory
+    user = Sys.getenv("LOGIN_USER"),   # mandatory
     password = Sys.getenv("PWD_USER"), # mandatory
     admin = FALSE,
     stringsAsFactors = FALSE

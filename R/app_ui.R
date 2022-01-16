@@ -14,42 +14,42 @@ app_ui <- function(request) {
     navbarPage(title = NULL,
                
                tabPanel(
-                 title = "Accueil",
+                 title = 'Inicio',
                  mod_tab_couple_ui("tab_couple_ui_1")
                ),
                
                tabPanel(
-                 title = "Confirmer ma venue", 
+                 title = "Confirmar", 
                  mod_tab_confirmation_ui("tab_confirmation_ui_1")
                ),
                
                tabPanel(
-                 title = "Programme de la journ\u00e9e",
+                 title = "Programa",
                  mod_tab_schedule_ui("tab_schedule_ui_1")
                ),
                
                tabPanel(
-                 title = "Lieu du mariage",
+                 title = "Lugar",
                  mod_tab_place_ui("tab_place_ui_1")
                ),
                
-               tabPanel(
-                 title = "H\u00e9bergements",
-                 mod_tab_accommodation_ui("tab_accommodation_ui_1")
-               ),
+               # tabPanel(
+               #   title = "Hospedaje",
+               #   mod_tab_accommodation_ui("tab_accommodation_ui_1")
+               # ),
                
-               tabPanel(
-                 title = "T\u00e9moins",
-                 mod_tab_witnesses_ui("tab_witnesses_ui_1")
-               ),
-               
+               # tabPanel(
+               #   title = "Testigos",
+               #   mod_tab_witnesses_ui("tab_witnesses_ui_1")
+               # ),
+               # 
                tabPanel(
                  title = "Covid",
                  mod_tab_covid_ui("tab_covid_ui_1")
                ),
                
                tabPanel(
-                 title = "Espace des mari\u00e9s",
+                 title = "Espacio de novios",
                  mod_hidden_tab_preparations_ui("hidden_tab_preparations_ui_1")
                )
                
@@ -74,11 +74,11 @@ golem_add_external_resources <- function(){
   
   set_labels(
     language = "en",
-    "Please authenticate" = "Site du mariage de Margot & David",
-    "Username:" = "Identifiant (indiqu\u00e9 sur le faire-part) :",
-    "Password:" = "Mot de passe (indiqu\u00e9 sur le faire-part) :",
-    "Login" = "Connexion",
-    "Username or password are incorrect" = "L\'identifiant ou le mot de passe est incorrect"
+    "Please authenticate" = "Fernanda & Santiago",
+    "Username:" = "Usuario :",
+    "Password:" = "Contraseña :",
+    "Login" = "Entrar",
+    "Username or password are incorrect" = "Credenciales incorrectas"
   )
  
   tags$head(
