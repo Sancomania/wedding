@@ -20,7 +20,7 @@ mod_tab_place_ui <- function(id){
       
       column(
         width = 6,
-        slickROutput(
+        slickR::slickROutput(
           ns("slickr"),
           height = '100%',
           width = "50%"
