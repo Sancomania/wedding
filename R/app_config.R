@@ -15,8 +15,8 @@ app_sys <- function(...){
 
 #' Read App Config
 #' 
-#' @param value Value to retrieve from the config file. 
-#' @param config R_CONFIG_ACTIVE value. 
+#' @param value      Value to retrieve from the config file. 
+#' @param config     R_CONFIG_ACTIVE value. 
 #' @param use_parent Logical, scan the parent directory for config file.
 #' 
 #' @noRd

@@ -13,3 +13,4 @@
 ^codecov\.yml$
 ^secrets$
 ^\.Renviron$
+^CODE_OF_CONDUCT\.md$

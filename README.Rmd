@@ -11,125 +11,45 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
-library(emo)
 ```
 
-# wedding <img src="man/figures/logo.png" align="right" alt="" width="120" />
+# wedding
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/ThinkR-open/wedding/workflows/R-CMD-check/badge.svg)](https://github.com/ThinkR-open/wedding/actions)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-{wedding} helps you to prepare and manage your wedding `r emo::ji("bride_with_veil")``r emo::ji("bride_with_veil")` - `r emo::ji("bride_with_veil")``r emo::ji("man_in_tuxedo")` - `r emo::ji("man_in_tuxedo")``r emo::ji("man_in_tuxedo")`
+The goal of wedding is to ...
 
-> Your wedding may be postponed several times because of the covid, but at least it will have its Shiny app.
+## Installation
 
-## Demo
-
-An example of the app is available here: http://connect.thinkr.fr/wedding
-
-Login to access the app: _welcome_ <br />
-Password to access the app: _bigday_ <br />
-Password to access the tab dedicated to brides/grooms: _onlyforbride_
-
-```{r echo=FALSE}
-knitr::include_graphics("man/figures/home-page.png")
-```
-
-You will find below how to run this demo app from RStudio Cloud.
-
-## Highlights
-
-- Secure access via a login and password authentication system
-- Information about the wedding day (schedule, accomodation, etc.)
-- RSVP feature where guests can specify their presence at the different times of the wedding, their choice for the diner menu and their diet
-- Dashboard - only accessible with login and password - where bride/grooms can manage the preparations for their wedding (guests, expenses, table plan)
-- Data stored in Google sheets
-- Design in line with the wedding announcement (colors, fonts, etc.)
-
-## Meaning of the tabs
-
-- *Accueil*: Home
-- *Confirmer ma venue*: Confirm my presence
-- *Programme de la journée*: Program of the day
-- *Lieu du mariage*: Location of the wedding
-- *Hébergements*: Accommodations
-- *Témoins*: Witnesses
-- *Covid*: Covid rules
-- *Espace des mariés*: Groom's area (expenses, guests, menu, `{ggplot2}` seating plan)
-
-```{r echo=FALSE}
-knitr::include_graphics("man/figures/seating-plan-page.png")
-```
-
-## Data
-
-The application is based on two datasets stored on Google Drive. They will be **updated according to the user's navigation in the app**.
-
-```{r echo=FALSE, out.width='70%', fig.align='center'}
-knitr::include_graphics("man/figures/data-examples.png")
-```
-
-- **data_guests**: contains information about your guests (name, attendance at the vin d'honneur, attendance at the dinner, attendance at the return on Sunday lunch, special diet, etc.).
-- **data_expenses**: contains information about the wedding expenses (venue, caterer, groom's outfit, wedding rings, etc.)
-
-Structure of the datasets can be explored with:
+You can install the released version of wedding from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-# Install and load {wedding} package
-# install.packages("remotes")
-remotes::install_github("ThinkR-open/wedding")
+install.packages("wedding")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
 library(wedding)
-
-# View data_expenses
-data("data_expenses_example")
-data_expenses_example
-
-# View data_guests
-data("data_guests_example")
-data_guests_example
+## basic example code
 ```
 
-Raw toy datasets can be accessed directly here: 
+What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
-- [**data_guests**](https://docs.google.com/spreadsheets/d/1uCENmsM7XEcqE_ae80uYUMU6EA_-ozKqHyGJXHJHDiU/edit?usp=sharing)
-- [**data_expenses**](https://docs.google.com/spreadsheets/d/1Mb6QPB2G2Msy-K9xnU6Cs8qJ32i5eMdTvY9hh1mJwKw/edit?usp=sharing)
-
-## Run the demo app from RStudio Cloud
-
-- Save the two toy datasets (see above) in your Google Drive storage
-- Acess the project stored in RStudio Cloud: https://rstudio.cloud/project/2548794
-- In Git tab, check that you are in the *main* branch and pull the latest version of the branch
-- Install `{wedding}`
-
-``` r
-remotes::install_github("ThinkR-open/wedding")
+```{r cars}
+summary(cars)
 ```
 
-- Create environment variables mandatory for the app
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>.
 
-``` r
-Sys.setenv(GOOGLE_MAIL = "wedding.r.package@gmail.com") # Replace wedding.r.package@gmail.com by your gmail adress
-Sys.setenv(LOGIN_USER = "welcome")
-Sys.setenv(PWD_USER = "bigday")
-Sys.setenv(PWD_COUPLE = "onlyforbride")
-Sys.setenv(IMG_BACKGROUND = "wedding-background-demo-compressed.jpg")
+You can also embed plots, for example:
+
+```{r pressure, echo = FALSE}
+plot(pressure)
 ```
 
-- Create and store the credentials for Google account - A popup will open, and you will be asked to write your password - This will create a token and will store it in a .secrets folder
-
-``` r
-# install.packages(c("gargle", "googledrive"))
-options(gargle_oauth_cache = ".secrets")
-options(gargle_quiet = FALSE)
-googledrive::drive_auth(cache = ".secrets", 
-                        email = Sys.getenv("GOOGLE_MAIL"))
-```
-
-- Run the demo app
-
-``` r
-wedding::run_app()
-```
-
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.

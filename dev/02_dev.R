@@ -41,6 +41,7 @@ devtools::build_vignettes()
 usethis::use_pipe()
 
 ## R files ----
+usethis::use_package('slickR')
 ## Functions
 usethis::use_r("get_count_countdown_moments")
 usethis::use_r("get_map_wedding")

@@ -16,3 +16,5 @@ rsconnect/
 secrets
 /doc/
 /Meta/
+.Rdata
+.httr-oauth

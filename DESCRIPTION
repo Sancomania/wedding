@@ -1,13 +1,9 @@
 Package: wedding
-Title: Margot's wedding app
+Title: App for Margot and David weeding
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "Margot",
-           family = "Brard",
-           role = c("cre", "aut"),
-           email = "margot@thinkr.fr")
-Description: Margot's wedding app. Contains all information about the big
-    day.
+Authors@R: person('Margot', 'Brard', email = 'margot@thinkr.fr', role = c('cre', 'aut'))
+Description: App for Margot and David weeding. 
+  Contains all the information relative to the wedding.
 License: GPL (>= 3)
 Depends: 
     R (>= 2.10)
@@ -31,6 +27,7 @@ Imports:
     shinyjs (>= 2.0.0),
     shinymanager (>= 1.0.300),
     shinyWidgets (>= 0.6.0),
+    slickR,
     stats,
     tibble (>= 3.1.1)
 Suggests: 
