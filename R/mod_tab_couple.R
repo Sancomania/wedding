@@ -30,7 +30,7 @@ mod_tab_couple_ui <- function(id){
                                tags$h1("Fernanda & Santiago", style = "font-family: 'Bauer Bodoni Std 1'; letter-spacing:10px"),
                                # tags$p("se disent oui", style = "font-family: 'Old script'; font-size:50px; letter-spacing:5px"),
                                tags$br(),
-                               tags$p("26 abril 2022", style = "font-family: 'Bauer Bodoni Std 1'; letter-spacing:10px"),
+                               tags$p("26 marzo 2022", style = "font-family: 'Bauer Bodoni Std 1'; letter-spacing:10px"),
                                tags$br(),
                                tags$p(textOutput(
                                  outputId = ns("decompte_mariage")
