@@ -101,9 +101,9 @@ mod_tab_place_server <- function(id, r_global){
     
     ns <- session$ns
     
-    output$slickr <- renderSlickR({
+    output$slickr <- slickR::renderSlickR({
       imgs <- list.files("inst/app/www/rb", pattern=".jpg", full.names = TRUE)
-      slickR(imgs)
+      slickR::slickR(imgs)
     })
     
     
@@ -114,7 +114,7 @@ mod_tab_place_server <- function(id, r_global){
           longitude  = -99.22766,
           latitude   =  19.00954, 
           name = '<a href="https://www.google.com/maps/place/Sal%C3%B3n+Rinc%C3%B3n+del+Bosque+(Casa+de+Eventos)/@19.0096319,-99.2299404,17z/data=!4m12!1m6!3m5!1s0x85cde1ac347da9a5:0x5d5bca8f21e38a06!2sSal%C3%B3n+Rinc%C3%B3n+del+Bosque+(Casa+de+Eventos)!8m2!3d19.0094916!4d-99.227641!3m4!1s0x85cde1ac347da9a5:0x5d5bca8f21e38a06!8m2!3d19.0094916!4d-99.227641">Rincón del Bosque</a>'),
-        icon_markers = "heart"
+          icon_markers = "heart"
       )
                             
     })
