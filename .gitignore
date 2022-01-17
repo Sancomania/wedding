@@ -14,3 +14,5 @@ Meta
 .secrets
 rsconnect/
 secrets
+/doc/
+/Meta/
