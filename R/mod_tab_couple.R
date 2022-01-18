@@ -39,7 +39,8 @@ mod_tab_couple_ui <- function(id){
                                  font-size:20px; 
                                  letter-spacing:5px; 
                                  text-align: center" 
-                               ))
+                                 )
+                               )
                       )
              )
              

@@ -13,9 +13,11 @@ mod_tab_schedule_ui <- function(id){
   
   tagList(
     tags$div(class = "landing-wrapper",
+             
              tags$div(class = "landing-block background-content",
                       img(src = "www/RB_2.jpeg")
                       ),
+             
              tags$div(class = "landing-block foreground-content",
                       tags$div(class = "foreground-text",
                                tags$p("Punto de Reunión en Cuernavaca", style = "font-family: \'Bauer Bodoni Std 1\'; font-size: 30px; letter-spacing:5px; text-align: center"),
